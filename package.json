@@ -12,7 +12,8 @@
   "license": "ISC",
   "lint-staged": {
     "*.js": [
-      "eslint"
+      "eslint --fix",
+      "git add"
     ]
   },
   "devDependencies": {

@@ -62,3 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // render(0)
   beginRender()
 })
+console.log('test')

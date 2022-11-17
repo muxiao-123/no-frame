@@ -59,3 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // })
   // intersectionObserver.observe(document.querySelector('.active'))
 })
+
+console.log('test')

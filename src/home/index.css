@@ -1,0 +1,9 @@
+.navigate-box {
+  padding: 0 20px;
+  height: 50px;
+  background-color: var(--theme-color);
+  line-height: 50px;
+}
+.navigate {
+  padding-right: var(--padding);
+}

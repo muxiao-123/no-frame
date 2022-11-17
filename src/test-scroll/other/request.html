@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>request order test</title>
+  <style>
+    .text {
+      height: 100px;
+      background-color: teal;
+    }
+  </style>
+</head>
+<body>
+  <div class="text">
+    text
+  </div>
+  <script type="text/javascript">
+    Promise.resolve('promise')
+    .then((res) => {
+      console.log(`${res}: ${performance.now()}`)
+    })
+    requestAnimationFrame((timestamp) => {
+      console.log(`request: ${timestamp}`)
+    })
+    setTimeout(() => {
+      console.log('setTime: ' + performance.now())
+    }, 0)
+    // DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log(`loaded: ${performance.now()}`)
+    })
+  </script>
+  
+</body>
+</html>

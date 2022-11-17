@@ -17,6 +17,8 @@
   "rules": {
     "no-console": "off",
     "no-plusplus": "off",
+    "no-useless-return": "off",
+    "func-names": "off",
     "prettier/prettier": [
       "error",
       {
@@ -30,5 +32,9 @@
       }
     ]
     // "eol-last": "error",
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }

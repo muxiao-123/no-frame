@@ -1,0 +1,46 @@
+@import "../common/reset.css";
+
+.box {
+  height: 200px;
+  background-color: teal;
+  overflow: hidden;
+}
+.inner {
+  /* margin: 100px auto 0; */
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+  transform: translate3d(0, 30px, 30px);
+  box-shadow: 0 0 10px 10px red;
+}
+.main {
+  position: relative;
+  height: 400px;
+}
+.mian-box {
+  margin: 0 auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+.main-item {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+.main-left {
+  background-color: aqua;
+}
+.main-right {
+  background-color: blue;
+}
+.main-top {
+  box-shadow: 0 0 5px 5px red;
+  transform: translateX(50px) rotateY(-120deg);
+  background-color: red;
+}
+.main-bottom {
+  background-color: green;
+  box-shadow: 0 0 5px 5px green;
+  transform: rotateY(-120deg);
+}

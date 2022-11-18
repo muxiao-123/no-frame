@@ -1,8 +1,7 @@
-let bottom
-// let top
 let start = 0
-let end = 10
-const mockData = (() => {
+let count
+let data
+const mockData = () => {
   const result = []
   let i = 0
   while (i < 1000) {
@@ -10,26 +9,18 @@ const mockData = (() => {
     i++
   }
   return result
-})()
-const intersectionObserver = new IntersectionObserver((entries) => {
-  console.log(entries[0].isIntersecting)
-  if (entries[0].isIntersecting) {
-    intersectionObserver.unobserve(bottom)
-    // eslint-disable-next-line no-use-before-define
-    // render(start + 1, end + 1)
-  }
-})
+}
 // eslint-disable-next-line no-shadow
-function render(startI = 0, endI = 10) {
-  // if (bottom) {
-  //   intersectionObserver.unobserve(bottom)
-  //   bottom = null
-  // }
-  const data = mockData.slice(startI, endI)
-  console.log(data)
-  const boxEle = document.querySelector('.box')
+function render() {
+  const { scrollTop } = document.querySelector('.box')
+  const boxEle = document.querySelector('.content')
+
+  start = Math.floor(scrollTop / 30)
+  const list = data.slice(start, start + count)
+  const fixedTop = scrollTop - (scrollTop % 30)
   const fragment = document.createDocumentFragment()
-  data.forEach((v) => {
+
+  list.forEach((v) => {
     const div = document.createElement('div')
     div.classList.add('box-inner')
     div.setAttribute('id', `item${v}`)
@@ -38,19 +29,20 @@ function render(startI = 0, endI = 10) {
   })
   boxEle.innerHTML = ''
   boxEle.appendChild(fragment)
-  // const { childNodes } = boxEle
-  // bottom = childNodes[childNodes.length - 1]
-  // intersectionObserver.observe(bottom)
+  requestAnimationFrame(() => {
+    boxEle.style.transform = `translateY(${fixedTop || 0}px)`
+  })
 }
 const scrollHandle = function (e) {
-  console.log(e)
   const { scrollTop, offsetHeight, scrollHeight } = e.target
+
+  render()
   if (scrollTop + offsetHeight === scrollHeight) {
     console.log('botom')
-    render(++start, ++end)
   }
 }
-// scroll 防抖 块
+// scroll 防抖 块 造成延迟动画
+// eslint-disable-next-line no-unused-vars
 const debounce = (fn, delay) => {
   let timer
   return function (...rest) {
@@ -65,8 +57,12 @@ const debounce = (fn, delay) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  render(start, end)
-  document
-    .querySelector('.box')
-    .addEventListener('scroll', debounce(scrollHandle, 200))
+  const box = document.querySelector('.box')
+  const vitrual = document.querySelector('.vitrual')
+
+  count = Math.ceil(box.offsetHeight / 30)
+  data = mockData()
+  vitrual.style.height = `${data.length * 30}px`
+  render()
+  document.querySelector('.box').addEventListener('scroll', scrollHandle)
 })

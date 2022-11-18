@@ -1,7 +1,7 @@
 .navigate-box {
   padding: 0 20px;
-  height: 50px;
-  background-color: var(--theme-color);
+  min-height: 50px;
+  background-color: rgba(0, 128, 128, .6);
   line-height: 50px;
 }
 .navigate {

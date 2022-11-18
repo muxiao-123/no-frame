@@ -67,7 +67,6 @@ const scrollHandleA = function (e) {
   // const { scrollTop, offsetHeight, scrollHeight } = e.target
 }
 
-// 加debounce
 document.addEventListener('DOMContentLoaded', () => {
   // eslint-disable-next-line no-use-before-define
   scrollRender()

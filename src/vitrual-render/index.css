@@ -1,13 +1,15 @@
+@import "../common/reset.css";
 .box {
   position: relative;
   height: 400px;
-  /* background-color: teal; */
   overflow-y: auto;
-  border: 1px solid red;
 }
-.box-inner {
-  height: 30px;
+.box::-webkit-scrollbar {
+  display: none;
 }
+/* .box-inner {
+  height: 50px;
+} */
 .vitrual {
   position: absolute;
   top: 0;
@@ -21,7 +23,12 @@
   top: 0;
   left: 0;
   right: 0;
+  background-color: aliceblue;
 }
-.active {
-  background-color: pink;
+.box-inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: blueviolet;
 }

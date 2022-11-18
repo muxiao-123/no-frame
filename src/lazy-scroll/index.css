@@ -1,0 +1,11 @@
+.box {
+  height: 400px;
+  background-color: teal;
+  overflow-y: auto;
+}
+.box-inner {
+  height: 100px;
+}
+.active {
+  background-color: pink;
+}

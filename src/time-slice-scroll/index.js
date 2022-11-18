@@ -17,7 +17,7 @@
 // }
 // render(0)
 
-// 自动分片
+// 自动分片 可能会造成一定影响，数据量差距，渲染时间不同
 const scrollEle = document.querySelector('.box-scroll')
 const add = (index) => {
   const div = document.createElement('div')

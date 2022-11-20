@@ -5,7 +5,8 @@ const routerArr = [
   { path: '../lazy-scroll/', params: '', name: '虚拟列表-scroll' },
   { path: '../vitrual-list-scroll/', params: '', name: '懒加载-scroll-ios' },
   { path: '../demo1/', params: '', name: 'demo1' },
-  { path: '../vitrual-render/', params: '', name: '虚拟列表-ios' }
+  { path: '../vitrual-render/', params: '', name: '虚拟列表-ios' },
+  { path: '../css/rotate/', params: '', name: '硬币旋转' }
 ]
 const generateRouter = (pathArr) => {
   const bodyEle = document.querySelector('.navigate-box')

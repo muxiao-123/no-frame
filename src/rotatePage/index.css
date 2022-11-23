@@ -1,0 +1,100 @@
+@import "../common/reset.css";
+.box {
+  position: relative;
+  height: 100vh;
+  background-color: rgba(10, 10, 10, 0.1);
+  overflow: hidden;
+  /* transform-style: preserve-3d; */
+  /* default > 10000+? */
+  perspective: 1000px;
+}
+.btn {
+  position: absolute;
+  top: 50%;
+  width: 5vw;
+  min-width: 40px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: teal;
+  z-index: 6;
+}
+.btn:nth-of-type(1) {
+  left: 20px;
+}
+.btn:nth-of-type(2) {
+  right: 20px;
+}
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 60vw;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: royalblue;
+}
+.left {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+}
+.right:first-child {
+  background-color: royalblue;
+}
+.right:last-child {
+  background-color: orangered;
+}
+.rotate-class {
+  transform-origin: left center;
+  animation: rotateIn .5s linear forwards;
+}
+.rotate-in {
+  transform-origin: left center;
+  animation: rotateIn .5s linear forwards;
+}
+.rotate-out {
+  transform-origin: left center;
+  animation: rotateOut .5s linear forwards;
+}
+.current-class {
+  z-index: 3;
+}
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(260deg);
+  }
+  10% {
+    transform: rotateY(270deg);
+    opacity: 0.1;
+    z-index: 4;
+  }
+  100% {
+    opacity: 1;
+    z-index: 4;
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotateOut {
+  0% {
+    opacity: 1;
+    transform: rotateY(-0deg);
+  }
+  10% {
+    opacity: 0.9;
+    transform: rotateY(-10deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+}

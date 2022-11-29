@@ -18,10 +18,8 @@
   perspective: 1000px;
 }
 .wrapper {
-  /* position: relative; */
   width: 100px;
   height: 100px;
-  /* background: rgba(221, 25, 25, 0.8); */
   transform-style: preserve-3d;
   transform-origin: center;
   animation: rotateY 3s linear infinite;

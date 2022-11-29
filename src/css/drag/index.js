@@ -1,10 +1,3 @@
-// const dragFn = function(ev) {
-//   ev.datatra
-// }
-
-// wrapper.addEventListener('mouseleave', function () {
-//   this.style.animationPlayState = 'paused'
-// })
 const dropHandle = function (ev) {
   ev.preventDefault()
   // eslint-disable-next-line no-param-reassign

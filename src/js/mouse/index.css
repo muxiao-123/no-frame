@@ -1,0 +1,26 @@
+@import "../../common/reset.css";
+.mouseover {
+  height: 200px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mouseenter {
+  height: 200px;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mouseover-sub,
+.mouseenter-sub {
+  width: 100px;
+  height: 100px;
+}
+.mouseover-sub {
+  background-color: blueviolet;
+}
+.mouseenter-sub  {
+  background-color: aqua;
+}

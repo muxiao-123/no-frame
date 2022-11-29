@@ -1,0 +1,44 @@
+@import "../common/reset.css";
+.main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+.btn-ground {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.btn-item {
+  margin-right: 10px;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+.btn-item[data-value="red"] {
+  color: red;
+  background-color: rgb(255, 0, 0, .1);
+}
+.btn-item[data-value="orange"] {
+  color: rgb(255, 165, 0);
+  background-color: rgba(255, 165, 0, .1);
+
+}
+.btn-item[data-value="blue"] {
+  color: blue;
+  background-color: rgba(17, 13, 241, .1);
+}
+.btn-item:hover {
+  color: rgb(42, 211, 42);
+}
+
+.canvas-box {
+  flex: 1;
+  font-size: 0;
+}
+#canvas {
+  width: 100%;
+  height: 100%;
+}

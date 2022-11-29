@@ -9,7 +9,9 @@ const routerArr = [
   { path: '../css/rotate/', params: '', name: '硬币旋转' },
   { path: '../rotatePage/', params: '', name: '翻页效果' },
   { path: '../css/rect/', params: '', name: '正方体绘制' },
-  { path: '../css/drag/', params: '', name: '拖动' }
+  { path: '../css/drag/', params: '', name: '拖动' },
+  { path: '../js/mouse/', params: '', name: 'mouse' },
+  { path: '../paint/', params: '', name: 'paint' }
 ]
 const generateRouter = (pathArr) => {
   const bodyEle = document.querySelector('.navigate-box')

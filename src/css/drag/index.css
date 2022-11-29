@@ -1,0 +1,55 @@
+@import "../../common/reset.css";
+.main {
+  /* width: 50vw; */
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(red, teal);
+  perspective: 1000px;
+}
+.droppable {
+  /* width: 50vw; */
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(orange, teal);
+  perspective: 1000px;
+}
+.wrapper {
+  /* position: relative; */
+  width: 100px;
+  height: 100px;
+  /* background: rgba(221, 25, 25, 0.8); */
+  transform-style: preserve-3d;
+  transform-origin: center;
+  animation: rotateY 3s linear infinite;
+}
+.start {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 3em;
+  /* pointer-events: none; */
+}
+.back {
+  background: rgba(83, 44, 221, 0.3);
+  transform: translateZ(50px);
+}
+.before {
+  transform: rotateY(180deg) translateZ(50px);
+  background: rgba(221, 25, 25, 0.8);
+}
+@keyframes rotateY {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}

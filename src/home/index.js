@@ -7,7 +7,9 @@ const routerArr = [
   { path: '../demo1/', params: '', name: 'demo1' },
   { path: '../vitrual-render/', params: '', name: '虚拟列表-ios' },
   { path: '../css/rotate/', params: '', name: '硬币旋转' },
-  { path: '../rotatePage/', params: '', name: '翻页效果' }
+  { path: '../rotatePage/', params: '', name: '翻页效果' },
+  { path: '../css/rect/', params: '', name: '正方体绘制' },
+  { path: '../css/drag/', params: '', name: '拖动' }
 ]
 const generateRouter = (pathArr) => {
   const bodyEle = document.querySelector('.navigate-box')

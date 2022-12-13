@@ -11,7 +11,8 @@ const routerArr = [
   { path: '../css/rect/', params: '', name: '正方体绘制' },
   { path: '../css/drag/', params: '', name: '拖动' },
   { path: '../js/mouse/', params: '', name: 'mouse' },
-  { path: '../paint/', params: '', name: 'paint' }
+  { path: '../paint/', params: '', name: 'paint' },
+  { path: '../css/stiky/', params: '', name: 'stiky' }
 ]
 const generateRouter = (pathArr) => {
   const bodyEle = document.querySelector('.navigate-box')

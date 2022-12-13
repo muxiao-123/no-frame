@@ -1,0 +1,45 @@
+@import "../../common/reset.css";
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.box, .box-right {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #ccc;
+}
+.box {
+  border-right: 10px solid #ccc;
+}
+.box-inner-title {
+  height: 50px;
+  background-color: rgba(0,0,0,.1);
+}
+.title-1 {
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+.title-2 {
+  position: sticky;
+  left: 0;
+  top: 50px;
+}
+.title-3 {
+  position: sticky;
+  left: 0;
+  top: 100px;
+}
+.title-4 {
+  position: sticky;
+  left: 0;
+  top: 150px;
+}
+.box-inner-container {
+  height: 400px;
+  background-color: teal;
+}
+.placeholder {
+  background-color: black;
+}
